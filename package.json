@@ -1,0 +1,14 @@
+{
+  "name": "lerna-typescript-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "app/**",
+    "server/**"
+],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
