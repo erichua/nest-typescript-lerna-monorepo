@@ -1,0 +1,20 @@
+{
+  "name": "lerna-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "private":true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eric Hua (T&T)",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "app/**",
+    "server/**"
+]
+}
