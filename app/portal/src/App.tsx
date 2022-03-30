@@ -5,7 +5,7 @@ import {logger} from '@common/reactlib';
 
 function App() {
   const l = new logger();
-  l.log('test');
+  l.log('tewwst');
   return (
     <div className="App">
       <header className="App-header">

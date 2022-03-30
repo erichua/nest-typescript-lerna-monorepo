@@ -3,6 +3,6 @@ export class logger{
 
     }
     log(trace: string){
-        console.log(`TEst v3 ${trace}`);
+        console.log(`TEst v4 ${trace}`);
     }
 }

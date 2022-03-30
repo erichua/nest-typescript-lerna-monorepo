@@ -3,7 +3,7 @@ export class Storage{
         console.log('storage contructor');
     }
     add(){
-        console.log('storage contructor add+v2');
+        console.log('storage contructor add+v5');
     }
 
     remove(){

@@ -9,7 +9,6 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "prepare": "tsc -p tsconfig.build.json -w",
     "build": "tsc -p tsconfig.build.json -w",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
