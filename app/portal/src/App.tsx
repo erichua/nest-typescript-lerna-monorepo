@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {logger} from '@common/reactlib';
+// import {logger} from '@common/reactlib';
 
 function App() {
-  const l = new logger();
-  l.log('tewwst');
+  // const l = new logger();
+  // l.log('tewwst');
   return (
     <div className="App">
       <header className="App-header">
