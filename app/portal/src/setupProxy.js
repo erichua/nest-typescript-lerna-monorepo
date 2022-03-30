@@ -32,7 +32,7 @@ module.exports = function (app) {
 
     app.use(
         proxy('/portal', {
-            target: 'http://172.16.143.44:32328', // 测试门户后端
+            target: 'https://orange-bay-0f5b6101e.1.azurestaticapps.net/', // 测试门户后端
             pathRewrite: {
                 '^/portal': '',
             },
