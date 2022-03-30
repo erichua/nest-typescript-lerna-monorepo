@@ -18,7 +18,7 @@ import ReactDOM from 'react-dom';
 import { notification, Modal, message } from 'antd';
 import App from './App';
 import { setMainApp } from '@ra-lib/admin';
-// import qiankun from './qiankun';
+import qiankun from './qiankun';
 
 // 开启mock，这个判断不要修改，否则会把mock相关js打入生产包，很大
 if (process.env.NODE_ENV === 'development' && process.env.REACT_APP_MOCK) {
@@ -35,14 +35,14 @@ function getRootDom(props) {
 function render(props = {}) {
     ReactDOM.render(<App />, getRootDom(props));
 }
-
+window.__POWERED_BY_QIANKUN__ =false;
 // 单独运行时，渲染
-//if (!window.__POWERED_BY_QIANKUN__) {
+if (!window.__POWERED_BY_QIANKUN__) {
     render();
-//}
+}
 
 // 乾坤主应用
-//qiankun();
+qiankun();
 
 // 作为乾坤子应用
 export async function bootstrap(props) {}

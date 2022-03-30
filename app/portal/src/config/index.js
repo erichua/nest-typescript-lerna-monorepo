@@ -32,7 +32,7 @@ export const NODE_ENV = process.env.NODE_ENV;
 // 实际运行环境，测试、预发布等环境时 NODE_ENV 也为 production，无法区分
 export const RUN_ENV = process.env.REACT_APP_RUN_ENV;
 // 应用名称
-export const APP_NAME = c('APP_NAME', 'React Admin');
+export const APP_NAME = c('APP_NAME', 'T&T Admin');
 // ajax 请求前缀
 // 开发环境 或者 测试环境使用 localStorage中存储的前缀
 export const SHOW_PROXY = NODE_ENV === 'development' || window.location.hostname === '172.16.143.44';
@@ -80,7 +80,7 @@ const mobileConfig = IS_MOBILE
 // config-hoc 高阶组件、布局默认配置
 export const CONFIG_HOC = {
     // 是否需要登录
-    auth: true,
+    auth: false,
     // props是否注入ajax
     ajax: true,
     // 是否与model连接
@@ -94,7 +94,7 @@ export const CONFIG_HOC = {
     // 侧边栏是否显示
     side: true,
     // Tabs是否显示
-    tab: false,
+    tab: true,
     // 持久化 Tabs记录
     persistTab: true,
     // tab左侧显示展开收起菜单按钮
