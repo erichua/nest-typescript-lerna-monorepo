@@ -37,12 +37,12 @@ function render(props = {}) {
 }
 
 // 单独运行时，渲染
-if (!window.__POWERED_BY_QIANKUN__) {
+//if (!window.__POWERED_BY_QIANKUN__) {
     render();
-}
+//}
 
 // 乾坤主应用
-qiankun();
+//qiankun();
 
 // 作为乾坤子应用
 export async function bootstrap(props) {}
