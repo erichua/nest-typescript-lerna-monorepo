@@ -82,7 +82,7 @@ const mobileConfig = IS_MOBILE
 // config-hoc 高阶组件、布局默认配置
 export const CONFIG_HOC = {
     // 是否需要登录
-    auth: true,
+    auth: false,
     // props是否注入ajax
     ajax: true,
     // 是否与model连接
