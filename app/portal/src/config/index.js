@@ -6,10 +6,12 @@ import {storage, getConfigValue, LAYOUT_TYPE} from '@ra-lib/admin';
 const allEnvConfig = {development, production};
 const configEnv = process.env.REACT_APP_CONFIG_ENV || process.env.NODE_ENV;
 const envConfig = allEnvConfig[configEnv] || {};
-const isQianKun = window.__POWERED_BY_QIANKUN__;
+// const isQianKun = window.__POWERED_BY_QIANKUN__;
+const isQianKun = false;
 const isQianKunPublicPath = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
 const appName = appPackage.name;
-const isIframe = window.self !== window.top;
+// const isIframe = window.self !== window.top;
+const isIframe = false;
 
 // 从 命令行、环境配置文件中获取配置信息
 const c = (key, defaultValue, parse = (value) => value) => getConfigValue(envConfig, key, defaultValue, parse);
@@ -80,7 +82,7 @@ const mobileConfig = IS_MOBILE
 // config-hoc 高阶组件、布局默认配置
 export const CONFIG_HOC = {
     // 是否需要登录
-    auth: false,
+    auth: true,
     // props是否注入ajax
     ajax: true,
     // 是否与model连接
@@ -122,7 +124,7 @@ export const CONFIG_HOC = {
     // 是否显示搜索菜单
     searchMenu: true,
     // 是否显示我的收藏菜单
-    showCollectedMenus: false,
+    showCollectedMenus: true,
     // PageContent组件 fitHeight 时，计算高度所用到的额外高度值，如果页面显示统一的footer，这里设置footer的高度
     pageOtherHeight: 0, // 默认footer高度 26
 
