@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// open mock
+if (process.env.NODE_ENV === 'development' && process.env.REACT_APP_MOCK) {
+  require('./mock/index');
+  console.warn('mock is enabled!!!');
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

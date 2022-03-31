@@ -1,12 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {storage} from '@common/reactlib';
+import { Helmet } from 'react-helmet';
+
 
 function App() {
-  const s = new storage();
-  s.add();
-  s.remove();
   return (
     <div className="App">
       <header className="App-header">
