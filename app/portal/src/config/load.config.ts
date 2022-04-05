@@ -1,7 +1,6 @@
 import commonConfig from './config.common';
 import developmentConfig from './config.development';
 import productionConfig from './config.production';
-import dotenv from 'dotenv';
 import paths from './paths'
 
 
@@ -10,6 +9,8 @@ const  appPackage =require(`${paths.appPackageJson}`);
 interface Map {
   [key: string]: object | undefined;
 }
+
+export const IS_MOBILE:Boolean = (window.document.body.clientWidth <= 575);
 
 const allEnvConfig: Map = {
    'DEVELOPMENT': Object.assign(developmentConfig, commonConfig) ,
@@ -23,6 +24,7 @@ const appEnv = (process.env.REACT_APP_CONFIG_ENV || process.env.NODE_ENV || 'DEV
 
 const appConfig: any = allEnvConfig[appEnv] || {};
 
+Object.assign(appConfig,IS_MOBILE);
 export { appConfig };
 
 
